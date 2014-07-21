@@ -24,6 +24,9 @@ If selection empty then look for the last Find command search term or the clipbo
 
         # If start and end cursor points are different then we have some text selected
         if selected.a != selected.b:
+            # We DO want to call "find_under" and populate the find buffer
+            if alt == "slurp_search":
+                return view.window().run_command("find_under")
             # We don't call "find_under" here as it populates the find panel and
             # so we would lose its value in case we wanted to use it later
             # Get the text of the selection
@@ -34,7 +37,7 @@ If selection empty then look for the last Find command search term or the clipbo
                 selectedPos = selected.b
             else:
                 selectedPos = selected.a
-        elif alt == "last_search":
+        elif alt == "last_search" or alt == "slurp_search":
             # Run the built in find_next command from the window context
             return view.window().run_command("find_next")
         elif alt == "clipboard":
@@ -83,6 +86,9 @@ If selection empty then look for the last Find command search term or the clipbo
 
         # If start and end cursor points are different then we have some text selected
         if selected.a != selected.b:
+            # We DO want to call "find_under_prev" and populate the find buffer
+            if alt == "slurp_search":
+                return view.window().run_command("find_under_prev")
             # We don't call "find_under_previous" here as it populates the find
             # panel and so we would lose its value in case we wanted to use it later
             # Get the text of the selection
@@ -93,7 +99,7 @@ If selection empty then look for the last Find command search term or the clipbo
                 selectedPos = selected.a
             else:
                 selectedPos = selected.b
-        elif alt == "last_search":
+        elif alt == "last_search" or alt == "slurp_search":
             # Run the built in find_prev command from the window context
             return view.window().run_command("find_prev")
         elif alt == "clipboard":

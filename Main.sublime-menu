@@ -5,6 +5,8 @@
         "id": "find",
         "children":
         [
+            { "command": "find_selected_next", "args": {"alt": "slurp_search"}, "caption": "Find selected next (slurp search)…" },
+            { "command": "find_selected_previous", "args": {"alt": "slurp_search"}, "caption": "Find selected previous (slurp search)…" },
             { "command": "find_selected_next", "args": {"alt": "last_search"}, "caption": "Find selected next (last search)…" },
             { "command": "find_selected_previous", "args": {"alt": "last_search"}, "caption": "Find selected previous (last search)…" },
             { "command": "find_selected_next", "args": {"alt": "clipboard"}, "caption": "Find selected next (clipboard)…" },

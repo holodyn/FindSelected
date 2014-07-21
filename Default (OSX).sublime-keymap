@@ -1,4 +1,6 @@
 [
+    { "keys": ["super+f"], "command": "find_selected_next", "args": { "alt": "slurp_search" } },
+    { "keys": ["super+shift+f"], "command": "find_selected_previous", "args": { "alt": "slurp_search" } },
     { "keys": ["f3"], "command": "find_selected_next", "args": { "alt": "last_search" } },
     { "keys": ["shift+f3"], "command": "find_selected_previous", "args": { "alt": "last_search" } },
     { "keys": ["super+f3"], "command": "find_selected_next", "args": { "alt": "clipboard" } },

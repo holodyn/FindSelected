@@ -5,12 +5,13 @@ quickly searching for text within a page.
 
 ## Details ##
 
-Two additional search methods are available:
+Three additional search methods are available:
 
 **find\_selected\_next** - If some text is selected then it is searched for and
 the cursor highlights the next occurrence of the text. If no text is selected then
 depending on the passed argument we either search for the last *Find* search term
-("last_search") or the clipboard ("clipboard").
+("last_search") or the clipboard ("clipboard"). Using ("slurp_search") will cause
+ highlighted text to be added to the Find buffer.
 
 **find\_selected\_previous** - As above but we search backwards
 
